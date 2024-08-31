@@ -81,15 +81,52 @@ This syllabus covers the key topics for interview preparation in the field of De
 
 ## Linux:
 1. What is the difference between absolute and relative paths in Linux?
-2. How do you check the available disk space in Linux?
-3. Explain the process of creating a symbolic link in Linux.
-4. How would you find all files modified within the last 24 hours in a directory?
-5. Describe the usage and syntax of the "grep" command in Linux.
-6. Write a shell script to display the current date and time.
-7. What is the purpose of the "ifconfig" command in Linux?
-8. How can you change the ownership of a file in Linux using the "chown" command?
-9. Explain the difference between TCP and UDP protocols.
-10. How do you add a user to a group in Linux using the "usermod" command?
+Ans - In Linux, paths are used to specify the location of files and directories. There are two types of paths: absolute and relative.
+An absolute path specifies the complete path to a file or directory from the root directory (/).
+A relative path specifies the path to a file or directory relative to the current working directory.
+
+3. How do you check the available disk space in Linux?
+Ans -  df -h   , Detailed usage - df -hT , Specfic file system - df -h /dev/sda1
+
+4. Explain the process of creating a symbolic link in Linux.
+Ans - Creating a symbolic link (or symlink) in Linux is straightforward. A symbolic link is essentially a shortcut or reference to another file or directory.
+ln -s [target] [link_name]
+
+5. How would you find all files modified within the last 24 hours in a directory?
+Ans - To find all files modified within the last 24 hours in a directory, you can use the find command in Linux
+find /path/to/directory -type f -mtime -1  ,  find /home/user/Documents -type f -mtime -1
+
+6. Describe the usage and syntax of the "grep" command in Linux.
+Ans - The grep command in Linux is used for searching text using patterns. It stands for “Global Regular Expression Print” and is a powerful tool for finding specific strings or patterns within files
+
+7. Write a shell script to display the current date and time.
+Ans - #!/bin/bash
+# Display the current date and time
+echo "Current Date and Time: $(date)"
+
+8. What is the purpose of the "ifconfig" command in Linux?
+Ans - The ifconfig command in Linux is used for network interface configuration. It stands for “interface configuration” and is a powerful tool for managing and configuring network interfaces.
+9. How can you change the ownership of a file in Linux using the "chown" command?
+Ans - To change the ownership of a file in Linux, you can use the chown command. This command allows you to change both the user and group ownership of a file or directory
+10. Explain the difference between TCP and UDP protocols.
+Ans - TCP (Transmission Control Protocol)
+Connection-Oriented: TCP establishes a connection between the sender and receiver before data transmission begins. This ensures a reliable communication channel.
+Reliability:         TCP guarantees the delivery of data packets in the same order they were sent. It uses acknowledgments and retransmissions to ensure data integrity.
+Flow Control:        TCP manages the rate of data transmission between sender and receiver to prevent congestion and ensure efficient data transfer.
+Error Checking:      TCP performs error-checking and correction, ensuring that corrupted data packets are retransmitted.
+Use Cases:           TCP is ideal for applications where reliability is crucial, such as web browsing, email, and file transfers.
+
+UDP (User Datagram Protocol)
+Connectionless: UDP does not establish a connection before data transmission. It sends data packets (datagrams) without ensuring they reach the destination.
+Speed: UDP is faster than TCP because it has minimal overhead. It does not perform error-checking or retransmissions.
+No Flow Control: UDP does not manage the rate of data transmission, which can lead to packet loss in congested networks.
+No Error Checking: UDP does not guarantee the delivery or order of data packets. It is a “best-effort” protocol.
+Use Cases: UDP is suitable for applications where speed is more important than reliability, such as live streaming, online gaming, and VoIP (Voice over IP).
+
+11. How do you add a user to a group in Linux using the "usermod" command?
+Ans - To add a user to a group in Linux, you can use the usermod command. This command modifies user account properties, including group memberships.
+usermod -aG groupname username
+
 
 ## Maven:
 1. What is Maven, and what is its primary purpose in software development?
